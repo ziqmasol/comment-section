@@ -4,10 +4,13 @@ import IconMinus from "/utlis/images/icon-minus.svg"
 import IconPlus from "/utlis/images/icon-plus.svg"
 import replyIcon from '/utlis/images/icon-reply.svg'
 import userPics from "/user_pics.jpg"
+import Reply from "./Reply"
+import { Voting } from "./Voting"
 
 const Card = () =>{
     return <React.Fragment>
         <div className="user_post_card">
+    <div className="user">
 
         <div className="user_details">
             <div className="user_pics_wrapper">
@@ -15,31 +18,23 @@ const Card = () =>{
             </div>
             <h4 className="user_name">Salam Adigun</h4>
             <h4 className="post_time">1 month Ago</h4>
+
+            <div className="user_reply display"><Reply icon={replyIcon} /></div>
         </div>
 
         {/* post contents */}
 
-        <p className="user_post_content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio at vel expedita voluptatem optio ab, minus maiores nobis veritatis magnam.        </p>
+        <p className="user_post_content">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam illo necessitatibus corrupti nulla. Nihil fugiat, illo natus consequuntur doloremque doloribus tenetur corrupti illum maiores. Tempora soluta inventore veritatis fugit facilis totam consequuntur ipsum magnam. Officiis libero molestiae illo deleniti nemo porro, quisquam minus exercitationem sint?     </p>
+    </div>
     {/* Footer */}
         <div className="card_footer">
-            <span className="vote_counter">
-                <button className="btn btn_upvote"aria-label="Up vote">
-                  <img src={IconPlus} alt="upvote comment" className="img_upvote" />
-                    </button>
-                <p className="vote_count">12</p>
-                <button className="btn btn_upvote" aria-label="Down Vote" >
-                  <img src={IconMinus} alt="down vote comment" className="downvote" />
-                </button>
 
-            </span>
-            <span className="reply_header">
-              <div className="reply_img_wrapper">
-                  <img src={replyIcon} alt="" className="reply_img" /></div>
+          <Voting iconMinus={IconMinus} iconPlus={IconPlus}  />
+            <div className="desktop">
 
-                <p className="reply_span">
-                  Reply
-     </p>
-            </span>
+            <Reply icon={replyIcon} />
+            </div>
+            {/*  */}
         </div>
 
         </div>

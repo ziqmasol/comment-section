@@ -49,10 +49,12 @@ body {
 
 #root{
   /* margin: auto; */
+  --grey-100:#dbeafe;
   position: relative;
-  border: 2px solid purple;
   width: 100%;
   height: 100%;
+  background-color: var(--grey-100);
+  background-color: red;
 }
 
 /* h1 {
